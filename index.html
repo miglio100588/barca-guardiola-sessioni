@@ -281,7 +281,7 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--t);min-hei
 
 <script>
 (function(){
-  const HASH='0c99a9d041d085746119143dd17a29a37d0c78737e26ef85648ae06ad19e2116';
+  const HASH='2b1de7c97d4c7e55e1e8fbe7e7ec1ede39240a7ae12f45218ba653b9cd3ca786'; // SHA-256("TikiTaka2007-2008")
   const KEY='barca_auth_v1';
   async function sha256(s){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('')}
   function unlock(){localStorage.setItem(KEY,'ok');const g=document.getElementById('_gate');g.style.opacity='0';g.style.transition='opacity .4s';setTimeout(()=>{g.remove();document.documentElement.style.visibility=''},400)}
